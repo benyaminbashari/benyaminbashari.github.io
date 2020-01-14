@@ -7,20 +7,31 @@
         Winter 2020 - 413
     </title>
 </head>
+<style>
+    .nav-pills > li > a.active {
+        background-color: #4CAF50!important;
+    }
+    .nav-pills> li > a:hover {
+        background-color: lightgray;
+    }
+    .LIGHT {
+        font-weight: 200;
+    }
+</style>
 <body onload="week0()">
 <div class="float-left">
     <div class="container-fluid">
+
+        <h4 class="LIGHT">CPSC 413 Design and Analysis of Algorithms I, Winter 2020<br><br></h4>
+
         <div class="row">
 
-            <div class="col">
-                <ul class="nav nav-tabs">
+            <div class="col-md-auto">
+                <ul class="nav flex-column nav-pills">
+
 
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#"><p class="text-success">CPSC 413</p></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a id="w0" class="nav-link active" onclick="week0()" href="#">Info</a>
+                        <a id="w0" class="nav-link active" onclick="week0()" href="#">Course Info</a>
                     </li>
 
                     <li class="nav-item">
@@ -86,16 +97,16 @@
                         </a>
                     </li>
 
-
                 </ul>
             </div>
-        </div>
-        <div class="row" >
 
-            <div class="col-8" id="txt">
+
+            <div class="col-md-auto" id="txt">
 
             </div>
+
         </div>
+
     </div>
 </div>
 <script>
@@ -110,7 +121,7 @@
     }
     function week0() {
         disableExcept(0);
-        document.getElementById("txt").innerHTML = '<h3 class=font-weight-light">CPSC 413   Design and Analysis of Algorithms I, Winter 2020</h3>' +
+        document.getElementById("txt").innerHTML =
             '<table class="table"><tbody>' +
             '<tr><th>Instructor</th><td>Dr. Mike Jacobson</td></tr>' +
             '<tr><th>Textbook</th><td>J. Kleinberg and E. Tardos, Algorithm Design</td></tr>' +
