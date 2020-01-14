@@ -7,19 +7,24 @@
         Winter 2020 - 413
     </title>
 </head>
-<body onload="week1()">
+<body onload="week0()">
 <div class="float-left">
     <div class="container-fluid">
         <div class="row">
 
             <div class="col">
                 <ul class="nav nav-tabs">
+
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#"><p class="text-success">CPSC 413</p></a>
                     </li>
 
                     <li class="nav-item">
-                        <a id="w1" class="nav-link active" onclick="week1()" href="#">Week 1</a>
+                        <a id="w0" class="nav-link active" onclick="week0()" href="#">Info</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="w1" class="nav-link" onclick="week1()" href="#">Week 1</a>
                     </li>
 
                     <li class="nav-item">
@@ -87,7 +92,7 @@
         </div>
         <div class="row" >
 
-            <div class="col" id="txt">
+            <div class="col-8" id="txt">
 
             </div>
         </div>
@@ -97,11 +102,23 @@
     function disableExcept(x) {
         var WEEKS_NUMBER = 12;
         var i;
-        for(i = 1 ; i <= WEEKS_NUMBER ; i++) {
+        for(i = 0 ; i <= WEEKS_NUMBER ; i++) {
             document.getElementById("w"+i).className = "nav-link";
         }
         document.getElementById("w"+x).className = "nav-link active";
 
+    }
+    function week0() {
+        disableExcept(0);
+        document.getElementById("txt").innerHTML = '<h3 class=font-weight-light">CPSC 413   Design and Analysis of Algorithms I, Winter 2020</h3>' +
+            '<table class="table"><tbody>' +
+            '<tr><th>Instructor</th><td>Dr. Mike Jacobson</td></tr>' +
+            '<tr><th>Textbook</th><td>J. Kleinberg and E. Tardos, Algorithm Design</td></tr>' +
+            '<tr><th>Assignments Submission and Grading</th><td><a class="link" href="https://www.gradescope.com/">Gradescope</a></td></tr>' +
+            '<tr><th>Discussion Board</th><td><a class="link" href="https://piazza.com/">Piazza</a></td></tr>' +
+            '<tr><th>My Email</th><td>benyamin.bashari@ucalgary.ca</td></tr>' +
+            '<tr><th>Office Hours</th><td>Friday 15:00 to 16:00</td></tr>' +
+            '</tbody></table>'
     }
     function week1() {
         disableExcept(1);

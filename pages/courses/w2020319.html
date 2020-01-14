@@ -7,7 +7,7 @@
         Winter 2020 - 319
     </title>
 </head>
-<body onload="week1()">
+<body onload="week0()">
 <div class="float-left">
     <div class="container-fluid">
         <div class="row">
@@ -19,7 +19,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a id="w1" class="nav-link active" onclick="week1()" href="#">Week 1</a>
+                        <a id="w0" class="nav-link active" onclick="week0()" href="#">Info</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="w1" class="nav-link" onclick="week1()" href="#">Week 1</a>
                     </li>
 
                     <li class="nav-item">
@@ -96,12 +100,22 @@
 <script>
     function disableExcept(x) {
         var WEEKS_NUMBER = 12;
-        var i;
-        for(i = 1 ; i <= WEEKS_NUMBER ; i++) {
+        var i ;
+        for(i = 0 ; i <= WEEKS_NUMBER ; i++) {
             document.getElementById("w"+i).className = "nav-link";
         }
         document.getElementById("w"+x).className = "nav-link active";
 
+    }
+    function week0() {
+        disableExcept(0);
+        document.getElementById("txt").innerHTML = '<h3 class=font-weight-light">CPSC 319 Data Structures, Algorithms, and Their Applications, Winter 2020</h3>' +
+            '<table class="table"><tbody>' +
+            '<tr><th>Instructor</th><td>Dr. Jonathan Hudson</td></tr>' +
+            '<tr><th>Textbook</th><td>Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser, Data Structures and Algorithms in Java</td></tr>' +
+            '<tr><th>Assignments Submission and Grading</th><td><a class="link" href="https://d2l.ucalgary.ca/">D2L</a></td></tr>' +
+            '<tr><th>My Email</th><td>benyamin.bashari@ucalgary.ca</td></tr>' +
+            '</tbody></table>'
     }
     function week1() {
         disableExcept(1);
