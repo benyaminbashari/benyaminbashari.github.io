@@ -1,0 +1,157 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>
+        Winter 2020 - 319
+    </title>
+</head>
+<body onload="week1()">
+<div class="float-left">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#"><p class="text-success">CPSC 319</p></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="w1" class="nav-link active" onclick="week1()" href="#">Week 1</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="w2" class="nav-link " onclick="week2()" href="#">Week 2</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w3" class="nav-link " onclick="week3()" href="#">Week 3</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w4" class="nav-link " onclick="week4()" href="#">Week 4</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w5" class="nav-link " onclick="week5()" href="#">Week 5</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w6" class="nav-link " onclick="week6()" href="#">Week 6</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w7" class="nav-link " onclick="week7()" href="#">Week 7</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w8" class="nav-link " onclick="week8()" href="#">Week 8</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w9" class="nav-link " onclick="week9()" href="#">Week 9</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="w10" class="nav-link " onclick="week10()" href="#">Week 10</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w11" class="nav-link " onclick="week11()" href="#">Week 11</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w12" class="nav-link " onclick="week12()" href="#">Week 12</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../courses.html">
+                            <p class="text-danger">Back to Courses</p>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="row" >
+
+            <div class="col" id="txt">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function disableExcept(x) {
+        var WEEKS_NUMBER = 12;
+        var i;
+        for(i = 1 ; i <= WEEKS_NUMBER ; i++) {
+            document.getElementById("w"+i).className = "nav-link";
+        }
+        document.getElementById("w"+x).className = "nav-link active";
+
+    }
+    function week1() {
+        disableExcept(1);
+        document.getElementById("txt").innerHTML = "Week 1";
+    }
+    function week2() {
+        disableExcept(2);
+        document.getElementById("txt").innerHTML = "Week 2";
+    }
+    function week3() {
+        disableExcept(3);
+        document.getElementById("txt").innerHTML = "Week 3";
+    }
+    function week4() {
+        disableExcept(4);
+        document.getElementById("txt").innerHTML = "Week 4";
+    }
+    function week5() {
+        disableExcept(5);
+        document.getElementById("txt").innerHTML = "Week 5";
+    }
+    function week6() {
+        disableExcept(6);
+        document.getElementById("txt").innerHTML = "Week 6";
+    }
+    function week7() {
+        disableExcept(7);
+        document.getElementById("txt").innerHTML = "Week 7";
+    }
+    function week8() {
+        disableExcept(8);
+        document.getElementById("txt").innerHTML = "Week 8";
+    }
+    function week9() {
+        disableExcept(9);
+        document.getElementById("txt").innerHTML = "Week 9";
+    }
+    function week10() {
+        disableExcept(10);
+        document.getElementById("txt").innerHTML = "Week 10";
+    }
+    function week11() {
+        disableExcept(11);
+        document.getElementById("txt").innerHTML = "Week 11";
+    }
+    function week12() {
+        disableExcept(12);
+        document.getElementById("txt").innerHTML = "Week 12";
+    }
+
+</script>
+</body>
+</html>
