@@ -1,13 +1,7 @@
-html, body {
-    background-attachment: fixed;
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/bg.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
+html {
     scroll-behavior: smooth;
-
+}
+.LIGHT {
+    font-weight: 200;
+    font-style: italic;
 }

@@ -3,14 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="google-site-verification" content="q1b3syPt8DKjshcKg-qpr8_yY437bCCFgdG8QZVM-Ec" />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>
         Benyamin Bashari's Homepage
     </title>
 </head>
 
-<body>
+
+
+<body onload="loadproperly()">
 
     <div class="float-left">
         <div class="container">
@@ -18,69 +21,120 @@
             <div class="row">
 
                 <div class="col">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#about" id="a1" onclick="disableExcept(1)">About Me!</a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#cv" id="a2" onclick="disableExcept(2)">CV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact" id="a3" onclick="disableExcept(3)">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pages/courses.html" >Courses</a>
-                        </li>
-                    </ul>
+                        <ul class="nav nav-tabs fixed-top navbar-light bg-light">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#about" id="m1" onclick="disableExcept(1)">About Me!</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="documents/CV.pdf" download="Beyamin_Bashari_CV.pdf">CV</a>
+                            </li>
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="#contact" id="m3" onclick="disableExcept(3)">Contact</a>-->
+<!--                            </li>-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/courses.html">Courses</a>
+                            </li>
+                        </ul>
+
                 </div>
             </div>
-            <div class="row" id="about">
 
-                <div class="col">
-                    <br>
+            <div class="row">
+
+                <div class="col" id="about">
+                    <br><br>
                     <img src="images/benyamin.jpg" class="rounded-circle" alt="Cinque Terre" height="250" width="250">
                 </div>
                 <div class="col-8">
-                    <br><br><br><br>
+                    <br><br><br><br><br>
 
 
-                    Benyamin Bashari is currently an M.Sc. student at
-                    the University of Calgary, he studied his Bachelor's
-                    degree in Computer Engineering at the Ferdowsi
-                    University of Mashhad. He is a Gold medalist of
-                    the National Scientific Olympiad in Iran (2018), and
-                    won a Gold medal in ACM Programming Contest
-                    Rocky Mountain Regional (2019), and also two Silver
-                    medals in ACM Programming Contest West Asia
-                    Tehran Regional (2016-2017). His research interests
-                    are Distributed Algorithms, Randomized Algorithms, and Natural Language Processing.
+                    I am currently a Master's student in Computer Science at the University of Calgary under the supervision of Dr. Philipp Woelfel.
+                    My research area is centered on randomized approaches for shared memory problems.
+                    I studied my Bachelor's degree in Computer Engineering at the Ferdowsi University of Mashhad.
+                    My <a href="https://journals.sagepub.com/doi/full/10.1177/0020294019877489">B.Sc thesis</a> was focused on finding influential users and posts on Instagram by using natural language processing approaches on textual contents of users' posts.
+<!--                    I also enjoy competitive programming and algorithmic questions, and I participated in ICPC regionals of Tehran and Rocky Mountain.-->
+
                 </div>
 
             </div>
-            <div class="row" id="cv">
-                <div class="col">
-                  CV
+            <div class="row">
+
+                <div class="col-5" id="contact">
+                    <br><br>
+                    <table class="table">
+                        <tr>
+                            <th rowspan>Address</th>
+                            <td>University of Calgary, ICT 624B
+                                <br>
+                                2500 University Drive NW
+                                Calgary, Alberta
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <th>Email</th>
+                            <td>benyamin.bashari@ucalgary.ca</td>
+                        </tr>
+                        <tr>
+                            <th>LinkedIn</th>
+                            <td><a href="https://www.linkedin.com/in/benyaminbashari/">benyaminbashari</a></td>
+                        </tr>
+                    </table>
+
                 </div>
             </div>
-            <div class="row" id="contact">
-                <div class="col">
-                     contact
+            <div class="row">
+
+                <div class="col" id="cv">
+                    <br><br>
+
+
                 </div>
             </div>
 
+            </div>
         </div>
     </div>
 </div>
 <script>
-    function disableExcept(x) {
-        ROWS = 3;
-        var i;
-        for(i = 1 ; i <= ROWS ; i++) {
-            document.getElementById("a"+i).className = "nav-link";
+    function loadproperly() {
+        var indx = -1;
+        for(var i = 0 ; i < document.URL.length ; i++) {
+            if(document.URL.charAt(i) === '#') {
+                indx = i;
+                break;
+            }
         }
-        document.getElementById("a"+x).className = "nav-link active"
+        //console.log(indx);
+        if(indx === -1) {
+            disableExcept(1)
+        }
+        else {
+            var tmp = document.URL.substring(indx+1, document.URL.length);
+            //console.log(tmp);
+            if(tmp === "about") {
+                disableExcept(1);
+            }
+            // else if(tmp === "cv") {
+            //     disableExcept(2);
+            // }
+            // else if(tmp === "contact") {
+            //     disableExcept(3);
+            // }
+
+        }
     }
+    function disableExcept(x) {
+        COLS = 1;
+        for(var i = 1 ; i <= COLS ; i++)
+                document.getElementById("m"+i).className = "nav-link";
+        document.getElementById("m"+x).className = "nav-link active"
+    }
+
 </script>
 </body>
 </html>
