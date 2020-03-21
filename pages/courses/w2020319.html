@@ -71,27 +71,11 @@
 
 
                     <li class="nav-item">
-                        <a id="w8" class="nav-link " onclick="week8()" href="#">Week 8</a>
+                        <a id="w8" class="nav-link " onclick="week8()" href="#">Other Material</a>
                     </li>
 
 
-                    <li class="nav-item">
-                        <a id="w9" class="nav-link " onclick="week9()" href="#">Week 9</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a id="w10" class="nav-link " onclick="week10()" href="#">Week 10</a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a id="w11" class="nav-link " onclick="week11()" href="#">Week 11</a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a id="w12" class="nav-link " onclick="week12()" href="#">Week 12</a>
-                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="../courses.html">
@@ -113,7 +97,7 @@
 </div>
 <script>
     function disableExcept(x) {
-        var WEEKS_NUMBER = 12;
+        var WEEKS_NUMBER = 8;
         var i ;
         for(i = 0 ; i <= WEEKS_NUMBER ; i++) {
             document.getElementById("w"+i).className = "nav-link";
@@ -192,24 +176,28 @@
     }
     function week8() {
         disableExcept(8);
-        document.getElementById("txt").innerHTML = "Week 8";
+        document.getElementById("txt").innerHTML =
+            '<ol> ' +
+            '<li> Java File IO (By Benyamin Bashari)</li>' +
+                '<ul>' +
+                '<li> <a href="../../documents/319/JavaFile/JavaFile.pdf" download="JavaFile.pdf">JavaFile.pdf</a> </li>' +
+                '<li> <a href="../../documents/319/JavaFile/ExceptionTest.java" download="ExceptionTest.java">ExceptionTest.java</a> </li>' +
+                '<li> <a href="../../documents/319/JavaFile/ExceptionExample.java" download="ExceptionExample.java">ExceptionExample.java</a> </li>' +
+                '<li> <a href="../../documents/319/JavaFile/FileExample.java" download="FileExample.java">FileExample.java</a> </li>' +
+                '<li> <a href="../../documents/319/JavaFile/input.txt" download="input.txt">input.txt</a> </li>' +
+                '</ul>' +
+            '<li> Key-Value Binary Tree (By Fahim Anzum)</li>' +
+            '<li> N-ary Tree (By Fahim Anzum)</li>' +
+            '<li> Heap Sort (By Fahim Anzum)</li>' +
+            '<li> Graph Representation (By Hooman Khosravi)</li>' +
+            '<li> DFT-BFT on Graph (By Hooman Khosravi)</li>' +
+            '<li> Static Hashtable (By Hooman Khosravi)</li>' +
+            '<li> Java Hashcode (By Daniel Satanove)</li>' +
+            '<li> Java TreeMap-TreeSet (By Daniel Satanove)</li>' +
+            '<li> Huffman Coding (By Benyamin Bashari)</li>' +
+            '</ol>'
     }
-    function week9() {
-        disableExcept(9);
-        document.getElementById("txt").innerHTML = "Week 9";
-    }
-    function week10() {
-        disableExcept(10);
-        document.getElementById("txt").innerHTML = "Week 10";
-    }
-    function week11() {
-        disableExcept(11);
-        document.getElementById("txt").innerHTML = "Week 11";
-    }
-    function week12() {
-        disableExcept(12);
-        document.getElementById("txt").innerHTML = "Week 12";
-    }
+
 
 </script>
 </body>
