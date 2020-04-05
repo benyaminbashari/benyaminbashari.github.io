@@ -89,9 +89,6 @@
                     </li>
 
 
-                    <li class="nav-item">
-                        <a id="w12" class="nav-link " onclick="week12()" href="#">Week 12</a>
-                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="../courses.html">
@@ -113,7 +110,7 @@
 </div>
 <script>
     function disableExcept(x) {
-        var WEEKS_NUMBER = 12;
+        var WEEKS_NUMBER = 11;
         var i;
         for(i = 0 ; i <= WEEKS_NUMBER ; i++) {
             document.getElementById("w"+i).className = "nav-link";
@@ -205,7 +202,7 @@
         document.getElementById("txt").innerHTML =
             '<ul> ' +
             '<li> <a href="../../documents/413/Week9/IntroductionDynamicProgramming.pdf" download="IntroductionDynamicProgramming.pdf">Introduction to Dynamic Programming</a> </li>' +
-            '<li> Question 1 of the Assignment 6 </li>' +
+            '<li> Work Session of the Assignment 6 (Question 1) </li>' +
             '</ul>';
     }
     function week10() {
@@ -213,17 +210,18 @@
         document.getElementById("txt").innerHTML =
             '<ul> ' +
             '<li> Reviewing Dynamic Programming Questions </li>' +
-            '<li> Question 2 of the Assignment 6 </li>' +
+            '<li> Work Session of the Assignment 6 (Question 2) </li>' +
             '</ul>';
     }
     function week11() {
         disableExcept(11);
-        document.getElementById("txt").innerHTML = "Week 11";
+        document.getElementById("txt").innerHTML =
+            '<ul> ' +
+            '<li> <a href="../../documents/413/Week11/NPComletenessExamples.pdf" download="NPComletenessExamples.pdf">NP Completeness Examples</a> </li>' +
+            '<li> Work Session of the Assignment 7 (Question 1, 2 and 3) </li>' +
+            '</ul>';
     }
-    function week12() {
-        disableExcept(12);
-        document.getElementById("txt").innerHTML = "Week 12";
-    }
+
 
 </script>
 </body>
