@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <title>
+        Projects
+    </title>
+</head>
+<style>
+    .nav-pills > li > a.active {
+        background-color: #4CAF50!important;
+    }
+    .nav-pills> li > a:hover {
+        background-color: lightgreen;
+    }
+    .LIGHT {
+        font-weight: 200;
+        font-style: italic;
+    }
+</style>
+<body onload="week0()">
+<div class="float-left">
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <ul class="nav nav-tabs fixed-top navbar-light bg-light">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About Me!</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#cv">CV</a>
+                    </li>
+                    <!--                    <li class="nav-item">-->
+                    <!--                        <a class="nav-link" href="../index.html#contact">Contact</a>-->
+                    <!--                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../pages/projects.html">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    <div class="container-fluid">
+
+       <br><br>
+
+        <div class="row">
+
+            <div class="col-md-auto">
+                <ul class="nav flex-column nav-pills">
+
+
+                    <li class="nav-item">
+                        <a id="w0" class="nav-link active" onclick="week0()" href="#">Lazy Snapshot Object</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="w1" class="nav-link" onclick="week1()" href="#">Freelance Hiring Website</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="w2" class="nav-link " onclick="week2()" href="#">Influential Post Identification</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="w3" class="nav-link " onclick="week3()" href="#">Handcrafted Feature Extraction Using CNN</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+
+
+            <div class="col-8" id="txt">
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script>
+    function disableExcept(x) {
+        var WEEKS_NUMBER = 3;
+        var i ;
+        for(i = 0 ; i <= WEEKS_NUMBER ; i++) {
+            document.getElementById("w"+i).className = "nav-link";
+        }
+        document.getElementById("w"+x).className = "nav-link active";
+
+    }
+    function week0() {
+        disableExcept(0);
+        document.getElementById("txt").innerHTML =
+            '<h5 class="MEDIUM">  &nbsp; &nbsp; Academic Research in Distributed Algorithms - Supervised by Dr. Philipp Woelfel </h5>' +
+            '<h6 class="MEDIUM">  &nbsp; &nbsp; May 2020 - Current </h6>' +
+            '<br><br>' +
+            '<ul> ' +
+            '<li> This project is part of my master\'s thesis. </li>' +
+            '<li> Snapshot objects provide a consistent view of the state of the shared memory at a point in time, while the contents of the memory are concurrently changing. </li>' +
+            '<li> Non-blocking lazy snapshot objects have been used in Software Transactional Memory (STM). </li>' +
+            '<li> In this research project we implemented a practical linearizable lazy snapshot object with polylogarithmic step complexity.</li>' +
+            '<li> This object is useful for applications that do not require to read the entire state of the memory each time a scan occurs. For example:' +
+            '<ul>' +
+            '<li> Error recovery system that requires rollbacks to the most recent backup, such as a database or an operating system.</li>' +
+            '<li> Concurrent data structures that perform complex queries on contents of the data structure.</li>' +
+            '</ul>' +
+            ' </li>' +
+            '</ul>'
+
+    }
+    function week2() {
+        disableExcept(2);
+        document.getElementById("txt").innerHTML =
+            '<h5 class="MEDIUM">  &nbsp; &nbsp; Academic Research in Social Media Mining - Supervised by Dr. E. Fazl-Ersi </h5>' +
+            '<h6 class="MEDIUM">  &nbsp; &nbsp; Jan. 2018 - April 2019 </h6>' +
+            '<br><br>' +
+            '<h6 class="MEDIUM">  &nbsp; &nbsp; &nbsp; Programming languages and libraries: Python, Gensim, Scikit-Learn, NLTK </h6>' +
+            '<ul> ' +
+            '<li> This project focused on identifying influential posts on Instagram, as a mean to discover influential users. </li>' +
+            '<li> We used textual contents of users\' posts as the input for our machine learning system. </li>' +
+            '<li> The general idea of our method is shown in the figure below. </li>' +
+            '<li> We achieved an accuracy of 83.64% for finding influential users. </li>' +
+            '<li> Paper: <a href="https://journals.sagepub.com/doi/full/10.1177/0020294019877489"> Bashari, B., & Fazl-Ersi, E. (2020). Influential post identification on Instagram through caption and hashtag analysis. Measurement and Control, 0020294019877489. </a> </li>' +
+            '</ul>' +
+            '<figure>' +
+            '<img src="../images/influential.png" alt="Cinque Terre">' +
+            '<figcaption> (a) Training phase and (b) testing phase of the proposed method, for identifying both influential posts and users. </figcaption>' +
+            '</figure>'
+    }
+    function week1() {
+        disableExcept(1);
+        document.getElementById("txt").innerHTML =
+            '<h5 class="MEDIUM">  &nbsp; &nbsp; Course Project of Internet Engineering </h5>' +
+            '<h6 class="MEDIUM">  &nbsp; &nbsp; Feb. 2019 - May 2019 </h6>' +
+            '<br><br>' +
+            '<h6 class="MEDIUM">  &nbsp; &nbsp; &nbsp; Programming languages and technologies: Java, Spring Framework, Hibernate, REST, ReactJS, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HTML, CSS '+
+            '</h6>' +
+            '<ul> ' +
+            '<li> Implemented a simple hiring freelance website. </li>' +
+            '<li> Implemented a frontend system with ReactJS, and worked with different aspects of web designing such as security, state management, and cookie handling. </li>' +
+            '<li> Implemented a backend system using Spring framework in Java, and provided a RESTful API.</li>' +
+            '<li> Learned about Object-Relational Mapping (ORM) and worked with Hibernate in Java.</li>' +
+            '<li> The frontend code of this project is available on Github:  <a href="https://github.com/benyaminbashari/Freelance-Hiring-Website"> Code </a></li>' +
+            '</ul>' +
+            '<figure>' +
+            '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="../images/freelance.png" height="125%" width="125%" alt="Cinque Terre">' +
+            '</figure>'
+    }
+    function week3() {
+        disableExcept(3);
+        document.getElementById("txt").innerHTML =
+            '<h5 class="MEDIUM">  &nbsp; &nbsp; Academic Research in Computer Vision - Supervised by M. Abolfazli Esfahani</h5>' +
+            '<h6 class="MEDIUM">  &nbsp; &nbsp; April 2018 - Oct. 2018 </h6>' +
+            '<br><br>' +
+            '<h6 class="MEDIUM">  &nbsp; &nbsp; &nbsp; Programming languages and libraries: MATLAB, C++, OpenCV</h6>' +
+            '<ul> ' +
+            '<li> We designed and implemented a system based on a pre-trained Convolutional Neural Network (CNN) to extract handcrafted features.</li>' +
+            '<li> The main idea of this research project is to extract convolutional layers from a pre-trained CNN and then use an optimization method to find a weight for each filter, in order to extract the desired handcrafted feature.</li>' +
+            '<li> The result of this project showed that the linear combination of filters can be used to extract handcrafted features such as edges and corners. </li> '+
+            '<li> The proposed method for identifying handcrafted features only requires a single training data. This method is also robust to various transforms on the image. The figure below shows the robustness of this method in the presence of Gaussian noise in comparison to Harris\' corner detector.</li>' +
+            '<li> My role in the project: I implemented the proposed method both on MATLAB and C++. I also designed and implemented an efficient algorithms to run our experiments. </li>'+
+            //'<li> Paper: </li>' +
+            '</ul>' +
+            '<figure>' +
+            '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="../images/corner.png" alt="Cinque Terre">' +
+            '<figcaption>  </figcaption>' +
+            '</figure>'
+    }
+
+
+
+</script>
+</body>
+
+</html>
